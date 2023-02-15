@@ -8,15 +8,69 @@ ul {
     list-style: none;
 }
 
+button {
+    height: 40px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: darkslategray;
+    margin-top: 12px;
+}
+
 #hero {
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     background-color: lightgray;
+    display: flex;
+}
+
+.hero-image {
+    width: 50%;
+    height: 100%;
+    background-image: url("../images/shoe-diagonal.png");
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+
+.hero-image-alternative {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-secondary-image {
+    height: 100%;
+}
+
+.hero-image-alternative > h1 {
+    text-align: center;
 }
 
 #product-description {
     width: 100vw;
-    height: 1200px;
+    display: flex;
+}
+
+.product-summary {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .product-summary > img {
+    width: 100%;
+} */
+
+#product-highlights {
+    /* width: 50%; */
+    display: none;
+}
+
+.product-highlights > div {
+    display: flex;
 }
 
 footer {
@@ -29,15 +83,19 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    #hero {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+    }
+
     .hero-image {
-        width: 100%;
-        height: 50%;
-        background-image: url("../images/shoe-pair.png");
-        background-size: cover;
         display: none;
     }
 
     .hero-image-alternative, .product-summary, #product-highlights {
+        /* width: 100%;
+        height: 100%; */
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -53,15 +111,6 @@ footer {
         height: 50%;
     }
 
-     button {
-        height: 40px;
-        border-radius: 12px;
-        font-size: 14px;
-        font-weight: bold;
-        background-color: darkslategray;
-        margin-top: 12px;
-    }
-
     .product-summary > h2 {
         font-size: 10px;
     }
@@ -70,5 +119,10 @@ footer {
         width: 100%;
         height: 250px;
         margin-bottom: 12px;
+    }
+
+    #product-description {
+        width: 100vw;
+        height: 1200px;
     }
 }
