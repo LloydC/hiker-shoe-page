@@ -40,6 +40,7 @@ button {
 .hero-image:hover {
     background-image: url("../images/shoe-tilt-black.jpg");
     cursor: pointer;
+    margin-left: 15%;
 }
 
 .hero-image-alternative {
@@ -54,8 +55,9 @@ button {
     height: 100%;
 }
 
-img:hover {
+.hero-image:hover, .product:hover  {
     transform: scaleX(-1);
+
 }
 
 .hero-image-alternative > h1 {
